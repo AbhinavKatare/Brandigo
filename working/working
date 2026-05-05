@@ -3,7 +3,7 @@ You are a senior full-stack engineer specializing in MERN stack applications wit
 I am building a **Healthcare E-commerce Platform** where a healthcare institute sells: its name is brandingo 
 
 * Laboratory equipment
-* Medical devices
+* Courses
 * Healthcare system parts
 
 The frontend UI is already designed and available in the repository. Your task is to **implement the full working platform** based on this UI.
