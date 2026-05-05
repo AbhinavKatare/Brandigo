@@ -1,0 +1,168 @@
+You are a senior full-stack engineer specializing in MERN stack applications with Supabase integration.
+
+I am building a **Healthcare E-commerce Platform** where a healthcare institute sells: its name is brandingo 
+
+* Laboratory equipment
+* Medical devices
+* Healthcare system parts
+
+The frontend UI is already designed and available in the repository. Your task is to **implement the full working platform** based on this UI.
+
+---
+
+## 🧩 Tech Stack Requirements
+
+* **Frontend**: React (with functional components + hooks)
+* **Backend**: Node.js + Express
+* **Database & Auth**: Supabase (PostgreSQL, Auth, Storage)
+* **State Management**: Context API or Redux Toolkit
+* **Styling**: Match the provided UI exactly
+* **API Integration**: REST APIs
+
+---
+
+## 🎯 Core Features to Implement
+
+### 1. User Side (Customer)
+
+* User authentication (Sign up, Login, Logout) using Supabase Auth
+* Browse products by categories (Lab Equipment, Devices, Parts)
+* Product details page
+* Add to cart / Remove from cart
+* Checkout system (basic, no payment gateway needed unless specified)
+* Order history
+* Search and filter functionality
+
+---
+
+### 2. Admin Panel
+
+Create a separate admin dashboard with:
+
+* Admin authentication
+* Add / Edit / Delete products
+* Manage categories
+* View and manage orders
+* Manage users
+* Dashboard analytics (basic stats like total orders, users, products)
+
+---
+
+### 3. Product Management
+
+Each product should include:
+
+* Name
+* Description
+* Price
+* Category
+* Images (stored in Supabase Storage)
+* Stock quantity
+
+---
+
+### 4. Supabase Integration
+
+* Use Supabase for:
+
+  * Authentication
+  * Database (PostgreSQL tables)
+  * File storage (product images)
+* Design proper schema:
+
+  * users
+  * products
+  * categories
+  * orders
+  * order_items
+* Use Supabase client in backend (or directly in frontend where appropriate)
+
+---
+
+### 5. API Development (Express)
+
+Create REST APIs for:
+
+* Auth (if needed alongside Supabase)
+* Products CRUD
+* Orders
+* Users (admin only)
+
+Follow proper structure:
+
+* controllers/
+* routes/
+* models/
+* middleware/
+
+---
+
+### 6. UI Functionality
+
+IMPORTANT:
+
+* Every button in the UI must be functional
+* No dummy buttons or dead links
+* Connect all pages properly using React Router
+* Ensure proper loading states and error handling
+
+---
+
+### 7. Folder Structure
+
+Provide a clean scalable structure:
+
+/client
+/components
+/pages
+/context or redux
+/services (API calls)
+
+/server
+/controllers
+/routes
+/middleware
+/config
+
+---
+
+### 8. Code Quality
+
+* Write clean, modular, reusable code
+* Use async/await
+* Proper error handling
+* Use environment variables (.env)
+* Add comments where necessary
+
+---
+
+### 9. Deliverables
+
+You must provide:
+
+1. Full frontend code
+2. Full backend code
+3. Supabase setup instructions
+4. Database schema (SQL)
+5. API documentation (basic)
+6. Steps to run the project locally
+
+---
+
+### 10. Additional Notes
+
+* Keep the platform simple but fully functional
+* Do NOT skip any feature
+* Do NOT leave placeholders or incomplete logic
+* Ensure the app is production-ready at a basic level
+
+---
+
+Now start by:
+
+1. Analyzing the UI structure
+2. Creating the database schema
+3. Then building backend APIs
+4. Then connecting frontend step-by-step
+
+Output code in well-structured sections.
