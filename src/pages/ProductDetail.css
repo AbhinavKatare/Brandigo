@@ -1,0 +1,265 @@
+.product-detail { padding: 2.5rem 0 4rem; }
+
+.pd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.pd-breadcrumb a { color: var(--accent); }
+.pd-breadcrumb span { color: var(--text-muted); }
+
+.pd-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+/* Gallery */
+.pd-gallery__main {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-off);
+  aspect-ratio: 4/3;
+}
+.pd-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-out-of-stock {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-gallery__thumbs {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.pd-gallery__thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pd-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pd-gallery__thumb--active { border-color: var(--accent); }
+.pd-gallery__thumb:hover { border-color: var(--primary); }
+
+/* Info */
+.pd-info { display: flex; flex-direction: column; gap: 1rem; }
+
+.pd-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+.pd-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+
+.pd-rating { display: flex; align-items: center; gap: 0.5rem; }
+.pd-rating-val { font-weight: 700; font-size: 0.95rem; }
+.pd-rating-count { font-size: 0.82rem; color: var(--text-muted); }
+
+.pd-certs { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pd-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.pd-price-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  background: var(--bg-off);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.pd-price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.pd-price-orig {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.pd-excl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.pd-purchase {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pd-qty {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.pd-qty-btn {
+  width: 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-secondary);
+}
+.pd-qty-btn:hover { background: var(--bg-off); color: var(--primary); }
+.pd-qty-val {
+  width: 44px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 0.6rem 0;
+}
+
+.pd-add-btn { flex: 1; justify-content: center; }
+
+.pd-quote-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.pd-guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: #F0FDF4;
+  border-radius: var(--radius-md);
+  border: 1px solid #A7F3D0;
+}
+.pd-guarantee {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: var(--primary);
+}
+
+/* Tabs */
+.pd-tabs-section {
+  margin-bottom: 3rem;
+}
+.pd-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2rem;
+}
+.pd-tab {
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+.pd-tab:hover { color: var(--primary); }
+.pd-tab--active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.pd-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.pd-spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.pd-spec-row:nth-child(odd) { background: var(--bg-off); }
+.pd-spec-key { color: var(--text-secondary); font-weight: 500; }
+.pd-spec-val { font-weight: 700; color: var(--text-primary); text-align: right; }
+
+.pd-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.pd-doc-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  color: var(--primary);
+}
+.pd-doc-link:hover { background: var(--bg-off); border-color: var(--accent); }
+.pd-doc-name { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
+.pd-doc-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+/* Related */
+.pd-related-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+.pd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .pd-related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .pd-main { grid-template-columns: 1fr; gap: 2rem; }
+  .pd-specs-grid { grid-template-columns: 1fr; }
+  .pd-related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .pd-purchase { flex-direction: column; }
+  .pd-add-btn { width: 100%; }
+  .pd-related-grid { grid-template-columns: 1fr; }
+}
