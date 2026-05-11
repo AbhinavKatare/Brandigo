@@ -133,3 +133,32 @@ VALUES
   ('Advanced Centrifuge X-400', 'Lab Equipment', 'High-speed refrigerated centrifuge.', 4250, 5100, 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=600', 4.8, 62, true, true, null),
   ('PCR Thermocycler Pro', 'Molecular Biology', 'Real-time PCR with cloud connectivity.', 8900, 11500, 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600', 4.9, 44, true, true, null);
 */
+
+-- ============================================================
+-- STORAGE BUCKET SETUP (For Product Images)
+-- ============================================================
+
+-- Create a new public bucket for product images
+insert into storage.buckets (id, name, public) 
+values ('product-images', 'product-images', true)
+on conflict (id) do nothing;
+
+-- Policy to allow public read access
+create policy "Public Access"
+  on storage.objects for select
+  using ( bucket_id = 'product-images' );
+
+-- Policy to allow authenticated admin users to upload images
+create policy "Admin Upload Access"
+  on storage.objects for insert
+  with check ( bucket_id = 'product-images' and auth.role() = 'authenticated' );
+
+-- Policy to allow authenticated admin users to update images
+create policy "Admin Update Access"
+  on storage.objects for update
+  using ( bucket_id = 'product-images' and auth.role() = 'authenticated' );
+
+-- Policy to allow authenticated admin users to delete images
+create policy "Admin Delete Access"
+  on storage.objects for delete
+  using ( bucket_id = 'product-images' and auth.role() = 'authenticated' );
